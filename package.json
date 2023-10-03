@@ -4,7 +4,8 @@
     "version": "1.0.0",
     "scripts": {
         "dev:client": "cd client && vite",
-        "build:client": "cd server && @powershell Remove-Item -Recurse -Force dist && cd ../client && vite build && @powershell Copy-Item dist -Recurse ../server",
+        "build:client:powershell": "cd server && @powershell Remove-Item -Recurse -Force dist && cd ../client && vite build && @powershell Copy-Item dist -Recurse ../server",
+        "build:client": "cd server && rm -rf dist && cd ../client && vite build && cp -r dist ../server",
         "dev:server": "cd server && cross-env NODE_ENV=development nodemon index.js",
         "start": "cross-env NODE_ENV=production node server/index.js",
         "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
