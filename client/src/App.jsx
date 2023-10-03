@@ -27,7 +27,7 @@ const MainPage = () => {
 const App = () => {
     const user = useSelector(getUser)
     const dispatch = useDispatch()
-    
+
     if (user) {
         blogService.setToken(user.token)
     }
@@ -37,19 +37,21 @@ const App = () => {
     }
 
     return (
-        <div className="container">
+        <div>
             <Navigation />
-            <Notification />
-            {!user && <LoginForm handleLogin={handleLogin} />}
-            {
-                user &&
-                <Routes>
-                    <Route path='/users' element={<Users />} />
-                    <Route path='/users/:id' element={<User />} />
-                    <Route path='/' element={<MainPage />} />
-                    <Route path='/blogs/:id' element={<Blog />} />
-                </Routes>
-            }
+            <div className="container">
+                <Notification />
+                {!user && <LoginForm handleLogin={handleLogin} />}
+                {
+                    user &&
+                    <Routes>
+                        <Route path='/users' element={<Users />} />
+                        <Route path='/users/:id' element={<User />} />
+                        <Route path='/' element={<MainPage />} />
+                        <Route path='/blogs/:id' element={<Blog />} />
+                    </Routes>
+                }
+            </div>
         </div>
     )
 }
