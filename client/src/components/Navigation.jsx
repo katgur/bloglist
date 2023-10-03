@@ -23,8 +23,8 @@ function Navigation() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/users">users</Nav.Link>
-                        <Nav.Link as={Link} to='/'>blogs</Nav.Link>
+                        <Link to="/users">users</Link>
+                        <Link to='/'>blogs</Link>
                         <NavDropdown title={`${user.name} logged in`} id="basic-nav-dropdown">
                             <NavDropdown.Item onClick={handleLogout}>Log out</NavDropdown.Item>
                         </NavDropdown>
