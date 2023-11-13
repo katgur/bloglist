@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import blogService from '../services/blogs'
-import { setError, setSuccess } from "./notificationReducer"
+import { setError, setSuccess } from './notificationReducer'
 
 const blogSlice = createSlice({
     name: 'blog',
@@ -30,7 +30,7 @@ export const initializeBlogs = () => {
                 dispatch(set(blogs))
             })
             .catch(error => {
-                dispatch(setError("error while fetching blogs" + (error.response ? `: ${error.response.data.error}` : "")))
+                dispatch(setError('error while fetching blogs' + (error.response ? `: ${error.response.data.error}` : '')))
             })
     }
 }
@@ -44,7 +44,7 @@ export const createBlog = blog => {
                 dispatch(setSuccess(`blog "${blog.title}" added`))
             })
             .catch((error) => {
-                dispatch(setError("error while creating blog" + (error.response ? `: ${error.response.data.error}` : "")))
+                dispatch(setError('error while creating blog' + (error.response ? `: ${error.response.data.error}` : '')))
             })
     }
 }
@@ -58,7 +58,7 @@ export const likeBlog = blog => {
                 dispatch(setSuccess(`blog "${newBlog.title}" liked`))
             })
             .catch((error) => {
-                dispatch(setError("error while liking blog" + (error.response ? `: ${error.response.data.error}` : "")))
+                dispatch(setError('error while liking blog' + (error.response ? `: ${error.response.data.error}` : '')))
             })
     }
 }
@@ -72,7 +72,7 @@ export const deleteBlog = blog => {
                 dispatch(setSuccess(`blog "${blog.title}" deleted`))
             })
             .catch((error) => {
-                dispatch(setError("error while removing blog" + (error.response ? `: ${error.response.data.error}` : "")))
+                dispatch(setError('error while removing blog' + (error.response ? `: ${error.response.data.error}` : '')))
             })
     }
 }
@@ -85,7 +85,7 @@ export const getBlogById = id => {
                 dispatch(setById(blog))
             })
             .catch((error) => {
-                dispatch(setError("error while fetching blog" + (error.response ? `: ${error.response.data.error}` : "")))
+                dispatch(setError('error while fetching blog' + (error.response ? `: ${error.response.data.error}` : '')))
             })
     }
 }
@@ -98,7 +98,7 @@ export const commentBlog = (id, comment) => {
                 dispatch(setById(blog))
             })
             .catch((error) => {
-                dispatch(setError("error while fetching blog" + (error.response ? `: ${error.response.data.error}` : "")))
+                dispatch(setError('error while fetching blog' + (error.response ? `: ${error.response.data.error}` : '')))
             })
     }
 }

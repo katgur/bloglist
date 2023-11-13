@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export const MESSAGE_TYPE_SUCCESS = "success"
-export const MESSAGE_TYPE_ERROR = "danger"
+export const MESSAGE_TYPE_SUCCESS = 'success'
+export const MESSAGE_TYPE_ERROR = 'danger'
 
 const notificationSlice = createSlice({
     name: 'notification',

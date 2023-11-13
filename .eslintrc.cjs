@@ -4,7 +4,9 @@ module.exports = {
         browser: true,
         es2020: true,
         node: true,
-        commonjs: true
+        commonjs: true,
+        "jest/globals": true,
+        "cypress/globals": true
     },
     extends: [
         "eslint:recommended",
@@ -26,6 +28,22 @@ module.exports = {
         "react/prop-types": 0,
         "react/react-in-jsx-scope": "off",
         "react/prop-types": 0,
-        "no-unused-vars": 0
+        "no-unused-vars": 0,
+        'indent': [
+            'error',
+            4
+        ],
+        'linebreak-style': [
+            'error',
+            'unix'
+        ],
+        'quotes': [
+            'error',
+            'single'
+        ],
+        'semi': [
+            'error',
+            'never'
+        ]
     }
 }

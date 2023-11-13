@@ -1,13 +1,13 @@
-import { useState } from "react"
-import { useDispatch } from "react-redux"
-import { createBlog } from "../reducers/blogReducer"
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { createBlog } from '../reducers/blogReducer'
 import { Form, Button, Stack } from 'react-bootstrap'
 
 function BlogForm({ toggleVisibility }) {
     const [blog, setBlog] = useState({
-        title: "",
-        author: "",
-        url: ""
+        title: '',
+        author: '',
+        url: ''
     })
     const dispatch = useDispatch()
 
@@ -16,9 +16,9 @@ function BlogForm({ toggleVisibility }) {
         toggleVisibility()
         dispatch(createBlog(blog))
         setBlog({
-            title: "",
-            author: "",
-            url: ""
+            title: '',
+            author: '',
+            url: ''
         })
     }
 

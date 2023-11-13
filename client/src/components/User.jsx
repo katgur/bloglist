@@ -1,9 +1,9 @@
-import { useDispatch, useSelector } from "react-redux"
-import { getUserById, selectUserById } from "../reducers/userReducer"
-import { useEffect } from "react"
+import { useDispatch, useSelector } from 'react-redux'
+import { getUserById, selectUserById } from '../reducers/userReducer'
+import { useEffect } from 'react'
 import { useParams } from 'react-router'
-import { ListGroup } from "react-bootstrap"
-import { Link } from "react-router-dom"
+import { ListGroup } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 function User() {
     const user = useSelector(selectUserById)
@@ -12,7 +12,7 @@ function User() {
 
     useEffect(() => {
         dispatch(getUserById(params.id))
-    }, [])
+    }, [dispatch, params.id])
 
     return (user &&
         <>

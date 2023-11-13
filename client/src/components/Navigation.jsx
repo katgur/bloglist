@@ -1,8 +1,8 @@
-import { getUser, logout } from "../reducers/authReducer"
-import { useSelector } from "react-redux"
-import { useDispatch } from "react-redux"
+import { getUser, logout } from '../reducers/authReducer'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 function Navigation() {
     const user = useSelector(getUser)

@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { commentBlog } from "../reducers/blogReducer"
+import { useState } from 'react'
+import { commentBlog } from '../reducers/blogReducer'
 import { useDispatch } from 'react-redux'
-import { useParams } from "react-router"
-import { ListGroup, Form, Button, Stack } from 'react-bootstrap';
+import { useParams } from 'react-router'
+import { ListGroup, Form, Button, Stack } from 'react-bootstrap'
 
 function Comments({ comments }) {
     const [comment, setComment] = useState('')
@@ -16,7 +16,7 @@ function Comments({ comments }) {
     }
 
     return (
-        <div style={{ marginTop: "5%" }}>
+        <div style={{ marginTop: '5%' }}>
             <Stack gap={3}>
                 <h2>Comments</h2>
                 <Form onSubmit={handleCommentSubmit}>

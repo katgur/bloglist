@@ -1,19 +1,19 @@
-import { useState } from "react"
+import { useState } from 'react'
 import { Form, Button, Stack } from 'react-bootstrap'
 
 function LoginForm({ handleLogin }) {
-    const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
 
     return (
         <>
-            <h2 style={{marginTop: "10%"}}>Login</h2>
+            <h2 style={{ marginTop: '10%' }}>Login</h2>
             <Form
                 onSubmit={(event) => {
                     event.preventDefault()
                     handleLogin(username, password)
-                    setUsername("")
-                    setPassword("")
+                    setUsername('')
+                    setPassword('')
                 }}
             >
                 <Form.Group>

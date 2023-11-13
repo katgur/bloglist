@@ -10,7 +10,7 @@ function Users() {
 
     useEffect(() => {
         dispatch(getUsersByCount())
-    }, [])
+    }, [dispatch])
 
     return (
         <>

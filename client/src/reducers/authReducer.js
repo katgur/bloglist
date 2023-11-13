@@ -1,8 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from '@reduxjs/toolkit'
 import authService from '../services/auth'
-import { setError, setSuccess } from "./notificationReducer"
+import { setError, setSuccess } from './notificationReducer'
 
-const USER_KEY = "loggedBlogappUser"
+const USER_KEY = 'loggedBlogappUser'
 
 const authSlice = createSlice({
     name: 'auth',
@@ -28,10 +28,10 @@ export const login = (username, password) => {
             .then((data) => {
                 dispatch(set(data))
                 window.localStorage.setItem(USER_KEY, JSON.stringify(data))
-                dispatch(setSuccess("you have successfully logged in"))
+                dispatch(setSuccess('you have successfully logged in'))
             })
             .catch((error) => {
-                dispatch(setError("error while logging in" + (error.response ? `: ${error.response.data.error}` : "")))
+                dispatch(setError('error while logging in' + (error.response ? `: ${error.response.data.error}` : '')))
             })
     }
 }
