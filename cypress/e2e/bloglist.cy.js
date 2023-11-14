@@ -1,5 +1,5 @@
-import userMock from '../../test/mock/users'
-import blogMock from '../../test/mock/blogs'
+import userMock from '../../server/test/mock/users'
+import blogMock from '../../server/test/mock/blogs'
 
 const mock = { ...userMock, ...blogMock }
 
@@ -7,7 +7,7 @@ describe('Blog app', function () {
     beforeEach(function () {
         cy.request('POST', `${Cypress.env('BACKEND')}/test/reset`)
         cy.request('POST', `${Cypress.env('BACKEND')}/users`, mock.user)
-        cy.visit('')
+        cy.visit('http://localhost:3003')
     })
 
     it('Login form is shown', function () {
